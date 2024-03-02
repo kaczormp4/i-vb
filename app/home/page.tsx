@@ -4,8 +4,10 @@ import Link from "next/link";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { Line } from "react-chartjs-2";
 import Chart from "react-google-charts";
+import { useRouter } from "next/navigation";
 
 export default function Home({ children }: { children: any }): any {
+  const router = useRouter();
   const dataStatistics = [
     ["Data", "Ilość odwiedzin"],
     ["01-03-2024", 150],
@@ -230,6 +232,7 @@ export default function Home({ children }: { children: any }): any {
                     <tr
                       key={index}
                       className="hover:bg-gray-100 cursor-pointer"
+                      onClick={() => router.push("/projects/1/projekt")}
                     >
                       <td className="px-6 py-4 whitespace-nowrap">
                         {row.klient}

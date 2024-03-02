@@ -1,20 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ImageMarker, {
   Marker,
   MarkerComponentProps,
 } from "./components/ImageMaker/ImageMaker";
 import Image from "next/image";
 import "./page.css";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [markers, setMarkers] = useState<Array<Marker>>([
     { top: 10, left: 50 },
   ]);
   console.log(markers);
-
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/home");
+  }, []);
   const CustomMarker = (props: MarkerComponentProps) => {
     return (
       <p className="custom-marker">My custom marker - {props.itemNumber}</p>
