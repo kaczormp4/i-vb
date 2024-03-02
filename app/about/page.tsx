@@ -1,7 +1,11 @@
 // components/About.js
 
 import React from "react";
-
+import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
+import InfoIcon from "@mui/icons-material/Info";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import PublicIcon from "@mui/icons-material/Public";
+import Diversity3Icon from "@mui/icons-material/Diversity3";
 const banner =
   "https://architaste.com.pl/wp-content/uploads/elementor/thumbs/projektowanie_wnetrz-2-pe24ews88cq2q3945omq0xq96n7281nqmuiwh2kgeg.jpg";
 const avatar =
@@ -69,51 +73,30 @@ const About = () => {
               <ul>
                 <li className="mb-2">
                   <a href="#projects" className="flex items-center">
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/983/983081.png" // Project icon URL
-                      alt="Projects"
-                      className="w-6 h-6 mr-2"
-                    />
+                    <CollectionsBookmarkIcon className="mr-2" />
                     Projekty
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#aboutUs" className="flex items-center">
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/3075/3075894.png" // About icon URL
-                      alt="About Us"
-                      className="w-6 h-6 mr-2"
-                    />
-                    O nas
+                    <InfoIcon className="mr-2" />O nas
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#contact" className="flex items-center">
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/3702/3702533.png" // Contact icon URL
-                      alt="Contact"
-                      className="w-6 h-6 mr-2"
-                    />
+                    <AlternateEmailIcon className="mr-2" />
                     Kontakt
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#socialMedia" className="flex items-center">
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png" // Social Media icon URL
-                      alt="Social Media"
-                      className="w-6 h-6 mr-2"
-                    />
+                    <PublicIcon className="mr-2" />
                     Social Media
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#team" className="flex items-center">
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/3067/3067206.png" // Team icon URL
-                      alt="Team"
-                      className="w-6 h-6 mr-2"
-                    />
+                    <Diversity3Icon className="mr-2" />
                     Zespół
                   </a>
                 </li>
