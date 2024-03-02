@@ -81,6 +81,7 @@ const Forms = () => {
             <li
               key={form.id}
               className="py-4 flex bg-white hover:bg-gray-100 cursor-pointer"
+              onClick={() => router.push("/forms/1")}
             >
               <div className="ml-4">
                 <div className="flex items-center">
