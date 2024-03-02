@@ -3,8 +3,19 @@
 import Link from "next/link";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { Line } from "react-chartjs-2";
+import Chart from "react-google-charts";
 
 export default function Home({ children }: { children: any }): any {
+  const dataStatistics = [
+    ["Data", "Ilość odwiedzin"],
+    ["01-03-2024", 150],
+    ["02-03-2024", 200],
+    ["03-03-2024", 180],
+    ["04-03-2024", 250],
+    ["05-03-2024", 300],
+    ["06-03-2024", 220],
+    ["07-03-2024", 180],
+  ];
   const data = [
     {
       klient: "Anna Nowak",
@@ -298,7 +309,24 @@ export default function Home({ children }: { children: any }): any {
             <h1 className="flex pb-4">
               <b>Statystyki</b>
             </h1>
-            <div className="h-30 pt-20">ds</div>
+            <div className="">
+              <Chart
+                width={"100%"}
+                height={"400px"}
+                chartType="LineChart"
+                loader={<div>Ładuję wykres...</div>}
+                data={dataStatistics}
+                options={{
+                  title: "Ilość odwiedzin na wizytowki w ciągu ostatnich 7 dni",
+                  hAxis: {
+                    title: "Data",
+                  },
+                  vAxis: {
+                    title: "Ilość odwiedzin",
+                  },
+                }}
+              />
+            </div>
           </div>
         </div>
         <div className="mt-20"></div>
